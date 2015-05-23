@@ -173,8 +173,17 @@ describe.skip('toString()', function () {
   });
 });
 
-describe('indexOf()', function () {
-
+describe.skip('indexOf()', function () {
+  it('`favoriteColor` stores the index of where the value \'Red\' can be found in the `colors` array', function () {
+    expect(favoriteColor).to.be.defined;
+    expect(favoriteColor).to.be.a('number');
+    expect(favoriteColor).to.be.equal(1);
+  });
+  it('`favoriteEvenNumber` stores the index of where the value \'76\' can be found in the `mixedNums` array', function () {
+    expect(favoriteEvenNumber).to.be.defined;
+    expect(favoriteEvenNumber).to.be.a('number');
+    expect(favoriteEvenNumber).to.be.equal(6);
+  });
 });
 
 describe('lastIndexOf()', function () {

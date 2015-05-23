@@ -90,18 +90,18 @@ describe('reverse()', function () {
 
   it('should reverse an array', function () {
     var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
-    var result = reverseArray(genericWordArray);
+    reverseArray(genericWordArray);
 
-    expect(result).to.be.deep.equal(['Worf', 'LaForge', 'Riker', 'Picard']);
+    expect(genericWordArray).to.be.deep.equal(['Worf', 'LaForge', 'Riker', 'Picard']);
     expect(spy).to.have.been.calledOn;
 
     spy.reset();
 
 
     var genericNumberArray = [1, 2, 3, 4, 5, 6];
-    var result = reverseArray(genericNumberArray);
+    reverseArray(genericNumberArray);
 
-    expect(result).to.be.deep.equal([6, 5, 4, 3, 2, 1]);
+    expect(genericNumberArray).to.be.deep.equal([6, 5, 4, 3, 2, 1]);
     expect(spy).to.have.been.calledOn;
   });
 });

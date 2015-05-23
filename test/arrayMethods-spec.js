@@ -72,8 +72,38 @@ describe('pop()', function () {
   });
 });
 
-describe.skip('reverse()', function () {
+describe('reverse()', function () {
+  var reverseArray = arrayMethods.reverseArray;
 
+  beforeEach(function () {
+    spy = sinon.spy(Array.prototype, 'reverse');
+  });
+
+  afterEach(function () {
+    Array.prototype.reverse.restore();
+  });
+
+  it('should be a function named `reverseArray`', function () {
+    expect(reverseArray).to.be.defined;
+    expect(reverseArray).to.be.a('function');
+  });
+
+  it('should reverse an array', function () {
+    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
+    var result = reverseArray(genericWordArray);
+
+    expect(result).to.be.deep.equal(['Worf', 'LaForge', 'Riker', 'Picard']);
+    expect(spy).to.have.been.calledOn;
+
+    spy.reset();
+
+
+    var genericNumberArray = [1, 2, 3, 4, 5, 6];
+    var result = reverseArray(genericNumberArray);
+
+    expect(result).to.be.deep.equal([6, 5, 4, 3, 2, 1]);
+    expect(spy).to.have.been.calledOn;
+  });
 });
 
 describe.skip('shift()', function () {

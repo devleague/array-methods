@@ -97,7 +97,6 @@ describe('reverse()', function () {
 
     spy.reset();
 
-
     var genericNumberArray = [1, 2, 3, 4, 5, 6];
     reverseArray(genericNumberArray);
 

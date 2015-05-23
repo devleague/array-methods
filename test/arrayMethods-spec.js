@@ -50,7 +50,7 @@ describe('push()', function () {
 });
 
 describe('pop()', function () {
-  var shiftArray = arrayMethods.shiftArray;
+  var popArray = arrayMethods.popArray;
 
   beforeEach(function () {
     spy = sinon.spy(Array.prototype, 'pop');
@@ -61,25 +61,25 @@ describe('pop()', function () {
   });
 
   it('should have a function name `removedFromArray`', function () {
-    expect(shiftArray).to.be.defined;
-    expect(shiftArray).to.be.a('function');
+    expect(popArray).to.be.defined;
+    expect(popArray).to.be.a('function');
   });
 
   it('should remove and return the last element of an array', function () {
     // test 1
     var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
-    var returnValue = shiftArray(genericWordArray);
-    expect(returnValue).to.be.equal('Picard');
-    expect(genericWordArray).to.deep.equal(['Riker', 'LaForge', 'Worf']);
+    var returnValue = popArray(genericWordArray);
+    expect(returnValue).to.be.equal('Worf');
+    expect(genericWordArray).to.deep.equal(['Picard', 'Riker', 'LaForge']);
     expect(spy).to.have.been.calledOn;
 
     spy.reset();
 
     // test 2
     var genericNumberArray = [1, 2, 3];
-    returnValue = shiftArray(genericNumberArray);
-    expect(returnValue).to.be.equal(1);
-    expect(genericNumberArray).to.be.deep.equal([2, 3]);
+    returnValue = popArray(genericNumberArray);
+    expect(returnValue).to.be.equal(3);
+    expect(genericNumberArray).to.be.deep.equal([1, 2]);
 
   });
 });
@@ -154,8 +154,39 @@ describe('shift()', function () {
   });
 });
 
-describe.skip('sort()', function () {
+describe('sort()', function () {
+  var shiftArray = arrayMethods.shiftArray;
 
+  beforeEach(function () {
+    spy = sinon.spy(Array.prototype, 'shift');
+  });
+
+  afterEach(function () {
+    Array.prototype.shift.restore();
+  });
+
+  it('should be a function named `shiftArray`', function () {
+    expect(shiftArray).to.be.defined;
+    expect(shiftArray).to.be.a('function');
+  });
+
+  it('should remove the first element in an array', function () {
+    // test 1
+    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
+    var result = shiftArray(genericWordArray);
+
+    expect(result).to.be.equal('Picard');
+    expect(spy).to.be.calledOn;
+
+    spy.reset();
+
+    // test 2
+    var genericNumberArray = [1, 2, 3];
+    result = shiftArray(genericNumberArray);
+
+    expect(result).to.be.equal(1);
+    expect(spy).to.be.calledOn;
+  });
 });
 
 describe.skip('splice()', function () {

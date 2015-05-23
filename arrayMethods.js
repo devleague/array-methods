@@ -14,7 +14,7 @@
  *
  * Using the pop() method
  *
- * Declare a new function to be exported named `popFromArray`
+ * Declare a new function to be exported named `popArray`
  * This function has one parameter:
  *   @param {Array}
  *
@@ -32,7 +32,6 @@
  * @return NONE
  */
 
- */
 /**
  *
  * Using the shift() method
@@ -42,4 +41,3 @@
  *   @param  {Array}
  *
  * @return {Any} Element that was removed
- */

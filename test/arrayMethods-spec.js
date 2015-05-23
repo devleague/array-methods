@@ -1,200 +1,119 @@
-var chai = require('chai');
-var sinon = require('sinon');
-var sinonChai = require('sinon-chai');
-var arrayMethods = require('./../arrayMethods.js');
-
 var expect = chai.expect;
 var should = chai.should();
-chai.use(sinonChai);
+var sandbox;
+// chai.use(sinonChai);
 
 var spy;
 
 var methodList = ['push', 'pop', 'reverse', 'shift', 'sort', 'splice', 'unshift', 'concat', 'join', 'slice', 'toString', 'indexOf', 'lastIndexOf', 'toLocaleString'];
 
-describe('push()', function () {
-  var pushToArray = arrayMethods.pushToArray;
-
-  beforeEach(function () {
-    spy = sinon.spy(Array.prototype, 'push');
+describe.skip('push()', function () {
+  it('Push your First and Last Name into an empty array', function () {
+    expect(nameArray).to.be.defined;
+    expect(nameArray).to.be.an('array');
+    expect(nameArray).to.have.length(2);
   });
 
-  afterEach(function () {
-    spy.restore();
-  });
-
-  it('should have a function named `pushToArray`', function () {
-    expect(pushToArray).to.be.defined;
-    expect(pushToArray).to.be.a('function');
-  });
-
-  it('should append a new item to an array', function () {
-    // test 1
-    var newValue = '4';
-    var genericNumberArray = [1, 2, 3];
-
-    pushToArray(genericNumberArray, newValue);
-    expect(spy.args[0][0]).to.equal('4');
-
-    spy.reset();
-
-    // test 2
-    var movie = {
-      movie: "The Perfect Host",
-      actor: 'David Hyde Pierce'
-    };
-    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
-
-    pushToArray(genericWordArray, movie)
-    expect(spy.args[0][0]).to.equal(movie);
+  it('to an already existing array', function () {
+    expect(genericNumberArray).to.be.defined;
+    expect(genericNumberArray).have.length(10);
+    expect(genericNumberArray).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
 });
 
-describe('pop()', function () {
-  var popArray = arrayMethods.popArray;
-
-  beforeEach(function () {
-    spy = sinon.spy(Array.prototype, 'pop');
+describe.skip('pop()', function () {
+  it('removes the last element of an array`', function () {
+    expect(colors).to.be.defined;
+    expect(colors).to.deep.equal(['Blue', 'Red', 'Yellow']);
   });
 
-  afterEach(function () {
-    Array.prototype.pop.restore();
-  });
-
-  it('should have a function name `removedFromArray`', function () {
-    expect(popArray).to.be.defined;
-    expect(popArray).to.be.a('function');
-  });
-
-  it('should remove and return the last element of an array', function () {
-    // test 1
-    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
-    var returnValue = popArray(genericWordArray);
-    expect(returnValue).to.be.equal('Worf');
-    expect(genericWordArray).to.deep.equal(['Picard', 'Riker', 'LaForge']);
-    expect(spy).to.have.been.calledOn;
-
-    spy.reset();
-
-    // test 2
-    var genericNumberArray = [1, 2, 3];
-    returnValue = popArray(genericNumberArray);
-    expect(returnValue).to.be.equal(3);
-    expect(genericNumberArray).to.be.deep.equal([1, 2]);
-
+  it('`popResult` is storing the return value', function () {
+    expect(popResult).to.be.defined;
+    expect(popResult).to.equal('Charlie');
   });
 });
 
-describe('reverse()', function () {
-  var reverseArray = arrayMethods.reverseArray;
-
-  beforeEach(function () {
-    spy = sinon.spy(Array.prototype, 'reverse');
+describe.skip('reverse()', function () {
+  it('the array named `scrambledWords', function () {
+    expect(scrambledWords).to.be.defined;
+    expect(scrambledWords).to.be.deep.equal(['burritos', 'for', 'the', 'win']);
   });
-
-  afterEach(function () {
-    Array.prototype.reverse.restore();
-  });
-
-  it('should be a function named `reverseArray`', function () {
-    expect(reverseArray).to.be.defined;
-    expect(reverseArray).to.be.a('function');
-  });
-
-  it('should reverse an array', function () {
-    // test 1
-    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
-    reverseArray(genericWordArray);
-
-    expect(genericWordArray).to.be.deep.equal(['Worf', 'LaForge', 'Riker', 'Picard']);
-    expect(spy).to.have.been.calledOn;
-
-    spy.reset();
-
-    // test 2
-    var genericNumberArray = [1, 2, 3, 4, 5, 6];
-    reverseArray(genericNumberArray);
-
-    expect(genericNumberArray).to.be.deep.equal([6, 5, 4, 3, 2, 1]);
-    expect(spy).to.have.been.calledOn;
+  it('the array named `phoneNumber', function () {
+    expect(phoneNumber).to.be.defined;
+    expect(phoneNumber).to.be.deep.equal([8, 6, 7, 5, 3, 0, 9]);
   });
 });
 
-describe('shift()', function () {
-  var shiftArray = arrayMethods.shiftArray;
-
-  beforeEach(function () {
-    spy = sinon.spy(Array.prototype, 'shift');
+describe.skip('shift()', function () {
+  it('removes the first element of an array', function () {
+    expect(orderQueue).to.be.defined;
+    expect(orderQueue).to.deep.equal([{ takeOut: 'Medium Salad'}, { takeOut: 'Burger'}]);
   });
-
-  afterEach(function () {
-    Array.prototype.shift.restore();
-  });
-
-  it('should be a function named `shiftArray`', function () {
-    expect(shiftArray).to.be.defined;
-    expect(shiftArray).to.be.a('function');
-  });
-
-  it('should remove the first element in an array', function () {
-    // test 1
-    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
-    var result = shiftArray(genericWordArray);
-
-    expect(result).to.be.equal('Picard');
-    expect(spy).to.be.calledOn;
-
-    spy.reset();
-
-    // test 2
-    var genericNumberArray = [1, 2, 3];
-    result = shiftArray(genericNumberArray);
-
-    expect(result).to.be.equal(1);
-    expect(spy).to.be.calledOn;
+  it('`nextOrder` is storing the return vale', function () {
+    expect(nextOrder).to.be.defined;
+    expect(nextOrder).to.deep.equal({ takeOut: 'Ice Cream' });
   });
 });
 
-describe('sort()', function () {
-  var shiftArray = arrayMethods.shiftArray;
-
-  beforeEach(function () {
-    spy = sinon.spy(Array.prototype, 'shift');
+describe.skip('sort()', function () {
+  it('the `mixedNums` array', function () {
+    expect(mixedNums).to.be.defined;
+    expect(mixedNums).to.have.length(13);
+    expect(mixedNums).to.deep.equal([1, 10, 2, 21, 3, 4, 40, 5, 7, 7, 76, 805, 81]);
   });
-
-  afterEach(function () {
-    Array.prototype.shift.restore();
-  });
-
-  it('should be a function named `shiftArray`', function () {
-    expect(shiftArray).to.be.defined;
-    expect(shiftArray).to.be.a('function');
-  });
-
-  it('should remove the first element in an array', function () {
-    // test 1
-    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
-    var result = shiftArray(genericWordArray);
-
-    expect(result).to.be.equal('Picard');
-    expect(spy).to.be.calledOn;
-
-    spy.reset();
-
-    // test 2
-    var genericNumberArray = [1, 2, 3];
-    result = shiftArray(genericNumberArray);
-
-    expect(result).to.be.equal(1);
-    expect(spy).to.be.calledOn;
+  it('the `mixedWords` array', function () {
+    expect(mixedWords).to.be.defined;
+    expect(mixedWords).to.have.length(5);
+    expect(mixedWords).to.deep.equal(["About", "Dont", "Forget", "Me", "You"]);
   });
 });
 
-describe.skip('splice()', function () {
+describe('splice()', function () {
+  describe.skip('removing elements', function () {
+    it('`fruitCollection` has only fruits inside of it', function () {
+      expect(fruitCollection).to.be.defined;
+      expect(fruitCollection).to.have.length(3);
+      expect(fruitCollection).to.deep.equal(['Apple', 'Banana', 'Pear']);
+    });
+    it('`notFruit` variable is storing the items removed from `fruitCollection`', function () {
+      expect(notFruit).to.be.defined;
+      expect(notFruit).to.an('array');
+      expect(notFruit).to.have.length(3);
+      expect(notFruit).to.deep.equal(['Scissors', 'Pug', 'Lady Bug']);
+    });
+    it('`gemBox` has only gems inside of it', function () {
+      console.log(gemBox);
+      expect(gemBox).to.be.defined;
+      expect(gemBox).to.have.length(6);
+      expect(gemBox).to.be.deep.equal(["Ruby", "Diamond", "Diamond", "Emerald", "Moonstone", "Sapphire"]);
+    });
+  });
+
+  describe.skip('inserting elements', function () {
+    it('`upToTen` should have a length of 10', function () {
+      console.log(upToTen);
+      expect(upToTen).to.be.defined;
+      expect(upToTen).to.be.an('array');
+      expect(upToTen).to.have.length(10);
+      expect(upToTen).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    });
+  });
+
+  describe.skip('"why not both?"', function () {
+    it('`brownOnly` has only the word "brown" in it and a length of 5', function () {
+      expect(brownOnly).to.be.defined;
+      expect(brownOnly).to.an('array');
+      expect(brownOnly).to.have.length(5);
+      expect(brownOnly).to.deep.equal(["brown", "brown", "brown", "brown", "brown"]);
+    });
+  });
 
 });
 
-describe.skip('unshift()', function () {
+describe('unshift()', function () {
+  it('expectation', function () {
 
+  });
 });
 
 describe('concat()', function () {

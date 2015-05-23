@@ -140,8 +140,13 @@ describe('concat()', function () {
   });
 });
 
-describe('join()', function () {
-
+describe.skip('join()', function () {
+  it('`sentence` stores the result of calling join on the variable `scrambledWords`', function () {
+    expect(sentence).to.deep.equal('burritos for the win');
+  });
+  it('`myFruits` stores the result of calling join on the variable `fruitCollection`', function () {
+    expect(fruitCollection).to.deep.equal('Apple + Banana + Pear');
+  });
 });
 
 describe('slice()', function () {

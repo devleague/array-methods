@@ -34,3 +34,55 @@ describe('push()', function () {
     expect(spy.args[0][0]).to.equal('4');
   });
 });
+
+describe.skip('pop()', function () {
+
+});
+
+describe.skip('reverse()', function () {
+
+});
+
+describe.skip('shift()', function () {
+
+});
+
+describe.skip('sort()', function () {
+
+});
+
+describe.skip('splice()', function () {
+
+});
+
+describe.skip('unshift()', function () {
+
+});
+
+describe('concat()', function () {
+
+});
+
+describe('join()', function () {
+
+});
+
+describe('slice()', function () {
+
+});
+
+describe('toString()', function () {
+
+});
+
+describe('indexOf()', function () {
+
+});
+
+describe('lastIndexOf()', function () {
+
+});
+
+describe('toLocaleString()', function () {
+
+});

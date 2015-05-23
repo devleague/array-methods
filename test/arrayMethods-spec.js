@@ -19,7 +19,7 @@ describe('push()', function () {
   });
 
   afterEach(function () {
-    Array.prototype.push.restore();
+    spy.restore();
   });
 
   it('should have a function named `appendToArray`', function () {
@@ -30,8 +30,20 @@ describe('push()', function () {
   it('should append a new item to an array', function () {
     var newValue = '4';
     var genericNumberArray = [1, 2, 3];
+
     appendToArray(genericNumberArray, newValue);
     expect(spy.args[0][0]).to.equal('4');
+
+    spy.reset();
+
+    var movie = {
+      movie: "The Perfect Host",
+      actor: 'David Hyde Pierce'
+    };
+    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
+
+    appendToArray(genericWordArray, movie)
+    expect(spy.args[0][0]).to.equal(movie);
   });
 });
 

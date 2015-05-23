@@ -2,7 +2,7 @@
  *
  * Using the push() method
  *
- * Declare a new function to be exported named `appendToArray`
+ * Declare a new function to be exported named `pushToArray`
  * This function has two parameters:
  *   @param  {Array}
  *   @param  {Any}
@@ -14,11 +14,11 @@
  *
  * Using the pop() method
  *
- * Declare a new function to be exported named `removeFromArray`
+ * Declare a new function to be exported named `popFromArray`
  * This function has one parameter:
  *   @param {Array}
  *
- * @return {Any} Element that was removed from the end of the Array that was given
+ * @return {Any} Element that was removed
  */
 
 /**
@@ -29,5 +29,17 @@
  * This function has one parameter:
  *   @param  {Array}
  *
- * @return {[type]}
+ * @return NONE
+ */
+
+ */
+/**
+ *
+ * Using the shift() method
+ *
+ * Declare a new function to be exported named `shiftArray`
+ * This function has one parameter:
+ *   @param  {Array}
+ *
+ * @return {Any} Element that was removed
  */

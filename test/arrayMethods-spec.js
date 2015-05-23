@@ -12,7 +12,7 @@ var spy;
 var methodList = ['push', 'pop', 'reverse', 'shift', 'sort', 'splice', 'unshift', 'concat', 'join', 'slice', 'toString', 'indexOf', 'lastIndexOf', 'toLocaleString'];
 
 describe('push()', function () {
-  var appendToArray = arrayMethods.appendToArray;
+  var pushToArray = arrayMethods.pushToArray;
 
   beforeEach(function () {
     spy = sinon.spy(Array.prototype, 'push');
@@ -22,33 +22,35 @@ describe('push()', function () {
     spy.restore();
   });
 
-  it('should have a function named `appendToArray`', function () {
-    expect(appendToArray).to.be.defined;
-    expect(appendToArray).to.be.a('function');
+  it('should have a function named `pushToArray`', function () {
+    expect(pushToArray).to.be.defined;
+    expect(pushToArray).to.be.a('function');
   });
 
   it('should append a new item to an array', function () {
+    // test 1
     var newValue = '4';
     var genericNumberArray = [1, 2, 3];
 
-    appendToArray(genericNumberArray, newValue);
+    pushToArray(genericNumberArray, newValue);
     expect(spy.args[0][0]).to.equal('4');
 
     spy.reset();
 
+    // test 2
     var movie = {
       movie: "The Perfect Host",
       actor: 'David Hyde Pierce'
     };
     var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
 
-    appendToArray(genericWordArray, movie)
+    pushToArray(genericWordArray, movie)
     expect(spy.args[0][0]).to.equal(movie);
   });
 });
 
 describe('pop()', function () {
-  var removeFromArray = arrayMethods.removeFromArray;
+  var shiftArray = arrayMethods.shiftArray;
 
   beforeEach(function () {
     spy = sinon.spy(Array.prototype, 'pop');
@@ -59,16 +61,26 @@ describe('pop()', function () {
   });
 
   it('should have a function name `removedFromArray`', function () {
-    expect(removeFromArray).to.be.defined;
-    expect(removeFromArray).to.be.a('function');
+    expect(shiftArray).to.be.defined;
+    expect(shiftArray).to.be.a('function');
   });
 
   it('should remove and return the last element of an array', function () {
+    // test 1
     var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
-    var returnValue = removeFromArray(genericWordArray);
-    expect(returnValue).to.be.equal('Worf');
-    expect(genericWordArray).to.deep.equal(['Picard', 'Riker', 'LaForge']);
+    var returnValue = shiftArray(genericWordArray);
+    expect(returnValue).to.be.equal('Picard');
+    expect(genericWordArray).to.deep.equal(['Riker', 'LaForge', 'Worf']);
     expect(spy).to.have.been.calledOn;
+
+    spy.reset();
+
+    // test 2
+    var genericNumberArray = [1, 2, 3];
+    returnValue = shiftArray(genericNumberArray);
+    expect(returnValue).to.be.equal(1);
+    expect(genericNumberArray).to.be.deep.equal([2, 3]);
+
   });
 });
 
@@ -89,6 +101,7 @@ describe('reverse()', function () {
   });
 
   it('should reverse an array', function () {
+    // test 1
     var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
     reverseArray(genericWordArray);
 
@@ -97,6 +110,7 @@ describe('reverse()', function () {
 
     spy.reset();
 
+    // test 2
     var genericNumberArray = [1, 2, 3, 4, 5, 6];
     reverseArray(genericNumberArray);
 
@@ -105,8 +119,39 @@ describe('reverse()', function () {
   });
 });
 
-describe.skip('shift()', function () {
+describe('shift()', function () {
+  var shiftArray = arrayMethods.shiftArray;
 
+  beforeEach(function () {
+    spy = sinon.spy(Array.prototype, 'shift');
+  });
+
+  afterEach(function () {
+    Array.prototype.shift.restore();
+  });
+
+  it('should be a function named `shiftArray`', function () {
+    expect(shiftArray).to.be.defined;
+    expect(shiftArray).to.be.a('function');
+  });
+
+  it('should remove the first element in an array', function () {
+    // test 1
+    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
+    var result = shiftArray(genericWordArray);
+
+    expect(result).to.be.equal('Picard');
+    expect(spy).to.be.calledOn;
+
+    spy.reset();
+
+    // test 2
+    var genericNumberArray = [1, 2, 3];
+    result = shiftArray(genericNumberArray);
+
+    expect(result).to.be.equal(1);
+    expect(spy).to.be.calledOn;
+  });
 });
 
 describe.skip('sort()', function () {

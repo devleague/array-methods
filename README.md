@@ -1,6 +1,5 @@
-# Array Basics
-
-
+Array Basics
+====
 
 ## Getting Started
 1. Fork and Clone this repository to your computer.

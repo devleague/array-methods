@@ -198,7 +198,3 @@ describe.skip('lastIndexOf()', function () {
     expect(lastFive).to.be.equal(9);
   });
 });
-
-describe('toLocaleString()', function () {
-
-});

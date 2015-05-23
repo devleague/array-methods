@@ -110,9 +110,16 @@ describe('splice()', function () {
 
 });
 
-describe('unshift()', function () {
-  it('expectation', function () {
-
+describe.skip('unshift()', function () {
+  it('`orderedValues` array has all numbers between 1 and 10, has a length of 10', function () {
+    expect(orderedValues).to.be.defined;
+    expect(orderedValues).to.have.length(10);
+    expect(orderedValues).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  });
+  it('`orderedValuesNewLength` is storing the length of `orderedValues`', function () {
+    expect(orderedValuesNewLength).to.be.defined;
+    expect(orderedValuesNewLength).to.a('number');
+    expect(orderedValuesNewLength).to.be.equal(10);
   });
 });
 

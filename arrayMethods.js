@@ -8,5 +8,5 @@ var mixedWords = ['Dont', 'You', 'Forget', 'About', 'Me'];
 var fruitCollection = ['Apple', 'Scissors', 'Pug', 'Lady Bug', 'Banana', 'Pear'];
 var gemBox = ['Ruby', 'Diamond', 'Diamond', 'Emerald', 'Moonstone', 'Pizza', 'Sneaker', 'Sapphire', 'Baby', 'Jeans', 'Soda Can', 'Boat'];
 var upToTen = [1, 2, 9, 10];
-
 var brownOnly = ["brown", "brownish", "ad8fy7iuhj23nrsf", 9813, {}, undefined,  "brown"];
+var orderedValues = [4, 5, 6, 7, 8, 9,10];

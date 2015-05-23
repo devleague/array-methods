@@ -149,8 +149,20 @@ describe.skip('join()', function () {
   });
 });
 
-describe('slice()', function () {
-
+describe.skip('slice()', function () {
+  it('`favoriteFriends` stores all my favs from the `firends` array', function () {
+    expect(favoriteFriends).to.be.defined;
+    expect(favoriteFriends).to.an('array');
+    expect(favoriteFriends).to.have.length(2);
+    expect(favoriteFriends).to.deep.equal(['Jacoby', 'Miko']);
+    expect(friends).to.deep.equal(['Todd', 'Jacoby', 'Miko', 'Joseph', 'Kevin', 'Todd C.']);
+  });
+  it('`owesMoney` stores all the names of people who owe me money', function () {
+    expect(owesMoney).to.be.defined;
+    expect(owesMoney).to.be.an('array');
+    expect(owesMoney).to.have.length(3);
+    expect(owesMoney).to.deep.equal(['Joseph', 'Kevin', 'Todd C.']);
+  });
 });
 
 describe('toString()', function () {

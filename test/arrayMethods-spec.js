@@ -35,8 +35,29 @@ describe('push()', function () {
   });
 });
 
-describe.skip('pop()', function () {
+describe('pop()', function () {
+  var removeFromArray = arrayMethods.removeFromArray;
 
+  beforeEach(function () {
+    spy = sinon.spy(Array.prototype, 'pop');
+  });
+
+  afterEach(function () {
+    Array.prototype.pop.restore();
+  });
+
+  it('should have a function name `removedFromArray`', function () {
+    expect(removeFromArray).to.be.defined;
+    expect(removeFromArray).to.be.a('function');
+  });
+
+  it('should remove and return the last element of an array', function () {
+    var genericWordArray = ['Picard', 'Riker', 'LaForge', 'Worf'];
+    var returnValue = removeFromArray(genericWordArray);
+    expect(returnValue).to.be.equal('Worf');
+    expect(genericWordArray).to.deep.equal(['Picard', 'Riker', 'LaForge']);
+    expect(spy).to.have.been.calledOn;
+  });
 });
 
 describe.skip('reverse()', function () {

@@ -1,7 +1,5 @@
 var expect = chai.expect;
 var should = chai.should();
-var sandbox;
-// chai.use(sinonChai);
 
 var spy;
 
@@ -124,7 +122,22 @@ describe.skip('unshift()', function () {
 });
 
 describe('concat()', function () {
+  it.skip('`randomThingsArray` is the result of joining the variables `genericNumberArray` and `colors`', function () {
+    console.log(randomThingsArray);
+    expect(randomThingsArray).to.be.defined;
+    expect(randomThingsArray).to.be.an('array');
+    expect(randomThingsArray).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Blue', 'Red', 'Yellow']);
+  });
+  it.skip('`updatedOrders` is the result of joining the array `orderQueue` and two custom orders that you define', function () {
+    console.log(updatedOrders);
+    expect(updatedOrders).to.be.defined;
+    expect(updatedOrders).to.be.an('array');
+    expect(updatedOrders).to.have.length(4);
 
+    updatedOrders.forEach(function(order){
+      expect(order).to.have.key('takeOut');
+    });
+  });
 });
 
 describe('join()', function () {

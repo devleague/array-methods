@@ -165,8 +165,12 @@ describe.skip('slice()', function () {
   });
 });
 
-describe('toString()', function () {
-
+describe.skip('toString()', function () {
+  it('`monthNameString` stores the result of called toString on the array stored at `monthNames`', function () {
+    expect(monthNameString).to.be.defined;
+    expect(monthNameString).to.be.a('string');
+    expect(monthNameString).to.be.deep.equal('Jan,Feb,Mar,Apr');
+  });
 });
 
 describe('indexOf()', function () {

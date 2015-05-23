@@ -11,3 +11,4 @@ var upToTen = [1, 2, 9, 10];
 var brownOnly = ['brown', 'brownish', 'ad8fy7iuhj23nrsf', 9813, {}, undefined,  'brown'];
 var orderedValues = [4, 5, 6, 7, 8, 9,10];
 var friends = ['Todd', 'Jacoby', 'Miko', 'Joseph', 'Kevin', 'Todd C.'];
+var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];

@@ -1,5 +1,5 @@
 {
-  "name": "Array Methods",
+  "name": "array-methods",
   "version": "0.0.1",
   "description": "An exercise focusing on methods that access and mutate Arrays",
   "main": "arrayMethods.js",

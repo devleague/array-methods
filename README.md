@@ -7,17 +7,11 @@ Array Basics
 1. All your work will be done in the file named: `arrayMethods.js`
 1. Make all the test pass!
 
-## Dependencies
+### Running in Browser
+Run the command: `npm start` then visit `localhost:8080/` in your browser
 
-### mocha
-This project uses [Mocha](http://mochajs.org/).
-
-Install it using: `npm install -g mocha`
-
-### http-server
-This project uses [http-server](https://github.com/indexzero/http-server)
-
-Install it using: `npm install -g http-server`
+### Running in Cli
+Run the command: `npm test` to run the tests in your command-line
 
 ## References
 [Array Methods by Jason Sewell](http://slides.com/jasonsewell/h-ooa-rray)

@@ -1,0 +1,31 @@
+{
+  "name": "array-methods",
+  "version": "0.0.2",
+  "description": "An exercise focusing on methods that access and mutate Arrays",
+  "main": "arrayMethods.js",
+  "directories": {
+    "test": "test",
+    "http": "."
+  },
+  "dependencies": {
+    "chai": "^2.3.0",
+    "http-server": "^0.8.0",
+    "mocha": "^2.2.5"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec --bail --watch",
+    "start": "./node_modules/.bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devleague/array-methods.git"
+  },
+  "author": "Dev League LLC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devleague/array-methods/issues"
+  },
+  "homepage": "https://github.com/devleague/array-methods"
+}

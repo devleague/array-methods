@@ -44,7 +44,7 @@ describe( 'push()', function() {
 });
 
 describe( 'pop()', function() {
-  it( 'removes the last element of an array`', function() {
+  it( 'removes the last element of an array', function() {
     expect( colors ).to.be.defined;
     expect( colors ).to.deep.equal(['Blue', 'Red', 'Yellow']);
   });
@@ -56,12 +56,12 @@ describe( 'pop()', function() {
 });
 
 describe( 'reverse()', function() {
-  it( 'the array named `scrambledWords', function() {
+  it( 'the array named `scrambledWords`', function() {
     expect( scrambledWords ).to.be.defined;
     expect( scrambledWords ).to.be.deep.equal(['burritos', 'for', 'the', 'win']);
   });
 
-  it( 'the array named `phoneNumber', function() {
+  it( 'the array named `phoneNumber`', function() {
     expect( phoneNumber ).to.be.defined;
     expect( phoneNumber ).to.be.deep.equal([8, 6, 7, 5, 3, 0, 9]);
   });

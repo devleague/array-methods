@@ -181,7 +181,7 @@ describe( 'join()', function() {
 });
 
 describe( 'slice()', function() {
-  it( '`favoriteFriends` stores all my favs from the `firends` array', function() {
+  it( '`favoriteFriends` stores all my favs from the `friends` array', function() {
     expect( favoriteFriends ).to.be.defined;
     expect( favoriteFriends ).to.an( 'array' );
     expect( favoriteFriends ).to.have.length( 2 );

@@ -7,7 +7,8 @@ if ( !window ) {
   var vm = require( 'vm' );
   var chai = require( 'chai' );
   var importedFile = fs.readFileSync( './arrayMethods.js' );
-  vm.runInThisContext( importedFile ); // file runs and it's contents has access to GLOBAL
+  // file runs and it's contents has access to GLOBAL
+  vm.runInThisContext( importedFile );
 }
 
 var expect = chai.expect;

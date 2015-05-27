@@ -215,7 +215,7 @@ describe( 'indexOf()', function() {
   it( '`favoriteEvenNumber` stores the index of where the value \'76\' can be found in the `mixedNums` array', function() {
     expect( favoriteEvenNumber ).to.be.defined;
     expect( favoriteEvenNumber ).to.be.a( 'number' );
-    expect( favoriteEvenNumber ).to.be.equal( 6 );
+    expect( favoriteEvenNumber ).to.be.equal( 10 );
   });
 });
 

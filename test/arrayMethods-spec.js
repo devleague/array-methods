@@ -220,7 +220,7 @@ describe( 'indexOf()', function() {
 });
 
 describe( 'lastIndexOf()', function() {
-  it( '`lastNine` stores the index of the last number 9 that can be found in the `bulkNumbers` array', function() {
+  it( '`lastNine` stores the index of the last number 5 that can be found in the `bulkNumbers` array', function() {
     expect( lastNine ).to.be.defined;
     expect( lastNine ).to.be.a( 'number' );
     expect( lastNine ).to.be.equal( 5 );

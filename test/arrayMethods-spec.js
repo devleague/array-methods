@@ -13,7 +13,21 @@ if ( !window ) {
 
 var expect = chai.expect;
 
-var methodList = ['push', 'pop', 'reverse', 'shift', 'sort', 'splice', 'unshift', 'concat', 'join', 'slice', 'toString', 'indexOf', 'lastIndexOf', 'toLocaleString'];
+var methodList = ['push',
+  'pop',
+  'reverse',
+  'shift',
+  'sort',
+  'splice',
+  'unshift',
+  'concat',
+  'join',
+  'slice',
+  'toString',
+  'indexOf',
+  'lastIndexOf',
+  'toLocaleString'
+];
 
 describe( 'push()', function() {
   it( 'Push your First and Last Name into an empty array', function() {

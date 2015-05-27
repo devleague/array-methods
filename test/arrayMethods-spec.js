@@ -39,7 +39,7 @@ describe( 'push()', function() {
   });
 });
 
-describe.skip( 'pop()', function() {
+describe( 'pop()', function() {
   it( 'removes the last element of an array`', function() {
     expect( colors ).to.be.defined;
     expect( colors ).to.deep.equal(['Blue', 'Red', 'Yellow']);
@@ -51,7 +51,7 @@ describe.skip( 'pop()', function() {
   });
 });
 
-describe.skip( 'reverse()', function() {
+describe( 'reverse()', function() {
   it( 'the array named `scrambledWords', function() {
     expect( scrambledWords ).to.be.defined;
     expect( scrambledWords ).to.be.deep.equal(['burritos', 'for', 'the', 'win']);
@@ -63,7 +63,7 @@ describe.skip( 'reverse()', function() {
   });
 });
 
-describe.skip( 'shift()', function() {
+describe( 'shift()', function() {
   it( 'removes the first element of an array', function() {
     expect( orderQueue ).to.be.defined;
     expect( orderQueue ).to.deep.equal([{ takeOut: 'Medium Salad'}, { takeOut: 'Burger'}]);
@@ -75,7 +75,7 @@ describe.skip( 'shift()', function() {
   });
 });
 
-describe.skip( 'sort()', function() {
+describe( 'sort()', function() {
   it( 'the `mixedNums` array', function() {
     expect( mixedNums ).to.be.defined;
     expect( mixedNums ).to.have.length( 13 );
@@ -90,7 +90,7 @@ describe.skip( 'sort()', function() {
 });
 
 describe( 'splice()', function() {
-  describe.skip( 'removing elements', function() {
+  describe( 'removing elements', function() {
     it( '`fruitCollection` has only fruits inside of it', function() {
       expect( fruitCollection ).to.be.defined;
       expect( fruitCollection ).to.have.length( 3 );
@@ -112,7 +112,7 @@ describe( 'splice()', function() {
     });
   });
 
-  describe.skip( 'inserting elements', function() {
+  describe( 'inserting elements', function() {
     it( '`upToTen` should have a length of 10', function() {
       console.log( upToTen );
       expect( upToTen ).to.be.defined;
@@ -122,7 +122,7 @@ describe( 'splice()', function() {
     });
   });
 
-  describe.skip( '"why not both?"', function() {
+  describe( '"why not both?"', function() {
     it( '`brownOnly` has only the word "brown" in it and a length of 5', function() {
       expect( brownOnly ).to.be.defined;
       expect( brownOnly ).to.an( 'array' );
@@ -133,7 +133,7 @@ describe( 'splice()', function() {
 
 });
 
-describe.skip( 'unshift()', function() {
+describe( 'unshift()', function() {
   it( '`orderedValues` array has all numbers between 1 and 10, has a length of 10', function() {
     expect( orderedValues ).to.be.defined;
     expect( orderedValues ).to.have.length( 10 );
@@ -148,13 +148,13 @@ describe.skip( 'unshift()', function() {
 });
 
 describe( 'concat()', function() {
-  it.skip( '`randomThingsArray` is the result of joining the variables `genericNumberArray` and `colors`', function() {
+  it( '`randomThingsArray` is the result of joining the variables `genericNumberArray` and `colors`', function() {
     expect( randomThingsArray ).to.be.defined;
     expect( randomThingsArray ).to.be.an( 'array' );
     expect( randomThingsArray ).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Blue', 'Red', 'Yellow']);
   });
 
-  it.skip( '`updatedOrders` is the result of joining the array `orderQueue` and two custom orders that you define', function() {
+  it( '`updatedOrders` is the result of joining the array `orderQueue` and two custom orders that you define', function() {
     console.log( updatedOrders );
     expect( updatedOrders ).to.be.defined;
     expect( updatedOrders ).to.be.an( 'array' );
@@ -166,7 +166,7 @@ describe( 'concat()', function() {
   });
 });
 
-describe.skip( 'join()', function() {
+describe( 'join()', function() {
   it( '`sentence` stores the result of calling join on the variable `scrambledWords`', function() {
     expect( sentence ).to.deep.equal( 'burritos for the win' );
   });
@@ -176,7 +176,7 @@ describe.skip( 'join()', function() {
   });
 });
 
-describe.skip( 'slice()', function() {
+describe( 'slice()', function() {
   it( '`favoriteFriends` stores all my favs from the `firends` array', function() {
     expect( favoriteFriends ).to.be.defined;
     expect( favoriteFriends ).to.an( 'array' );
@@ -193,7 +193,7 @@ describe.skip( 'slice()', function() {
   });
 });
 
-describe.skip( 'toString()', function() {
+describe( 'toString()', function() {
   it( '`monthNameString` stores the result of called toString on the array stored at `monthNames`', function() {
     expect( monthNameString ).to.be.defined;
     expect( monthNameString ).to.be.a( 'string' );
@@ -201,7 +201,7 @@ describe.skip( 'toString()', function() {
   });
 });
 
-describe.skip( 'indexOf()', function() {
+describe( 'indexOf()', function() {
   it( '`favoriteColor` stores the index of where the value \'Red\' can be found in the `colors` array', function() {
     expect( favoriteColor ).to.be.defined;
     expect( favoriteColor ).to.be.a( 'number' );
@@ -215,7 +215,7 @@ describe.skip( 'indexOf()', function() {
   });
 });
 
-describe.skip( 'lastIndexOf()', function() {
+describe( 'lastIndexOf()', function() {
   it( '`lastNine` stores the index of the last number 9 that can be found in the `bulkNumbers` array', function() {
     expect( lastNine ).to.be.defined;
     expect( lastNine ).to.be.a( 'number' );

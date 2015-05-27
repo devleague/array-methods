@@ -1,3 +1,4 @@
+// DO NOT MODIFY
 var genericNumberArray = [1, 2, 3, 4, 5];
 var colors = ['Blue', 'Red', 'Yellow', 'Charlie'];
 var scrambledWords = ['win', 'the', 'for', 'burritos'];
@@ -14,4 +15,4 @@ var friends = ['Todd', 'Jacoby', 'Miko', 'Joseph', 'Kevin', 'Todd C.'];
 var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
 var bulkNumbers = [5, 5, 6, 6, 9, 9, 2, 2, 2, 5, 2];
 
-var nameArray = ['Ray', 'Farias'];
+// do your work below!

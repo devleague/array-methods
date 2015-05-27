@@ -5,6 +5,7 @@ Array Basics
 1. Fork and Clone this repository to your computer.
 1. Navigate to the project folder and open it up in your Text Editor/IDE of choice.
 1. All your work will be done in the file named: `arrayMethods.js`
+1. Install dependencies with the command: `npm install`
 1. Make all the test pass!
 
 ### Running in Browser

@@ -176,7 +176,7 @@ describe( 'join()', function() {
   });
 
   it( '`myFruits` stores the result of calling join on the variable `fruitCollection`', function() {
-    expect( fruitCollection ).to.deep.equal( 'Apple + Banana + Pear' );
+    expect( myFruits ).to.deep.equal( 'Apple + Banana + Pear' );
   });
 });
 

@@ -73,7 +73,7 @@ describe( 'shift()', function() {
     expect( orderQueue ).to.deep.equal([{ takeOut: 'Medium Salad'}, { takeOut: 'Burger'}]);
   });
 
-  it( '`nextOrder` is storing the return vale', function() {
+  it( '`nextOrder` is storing the return value', function() {
     expect( nextOrder ).to.be.defined;
     expect( nextOrder ).to.deep. equal({ takeOut: 'Ice Cream' });
   });

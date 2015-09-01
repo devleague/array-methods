@@ -36,7 +36,7 @@ describe( 'push()', function() {
     expect( nameArray ).to.have.length( 2 );
   });
 
-  it( 'to an already existing array', function() {
+  it( 'all the missing numbers up to and including 10 to an already existing array. ', function() {
     expect( genericNumberArray ).to.be.defined;
     expect( genericNumberArray ).have.length( 10 );
     expect( genericNumberArray ).to.deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);

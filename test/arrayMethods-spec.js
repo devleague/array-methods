@@ -109,7 +109,6 @@ describe( 'splice()', function() {
     });
 
     it( '`gemBox` has only gems inside of it', function() {
-      console.log( gemBox );
       expect( gemBox ).to.be.defined;
       expect( gemBox ).to.have.length( 6 );
       expect( gemBox ).to.be.deep.equal(['Ruby', 'Diamond', 'Diamond', 'Emerald', 'Moonstone', 'Sapphire']);
@@ -118,7 +117,6 @@ describe( 'splice()', function() {
 
   describe( 'inserting elements', function() {
     it( '`upToTen` should have a length of 10', function() {
-      console.log( upToTen );
       expect( upToTen ).to.be.defined;
       expect( upToTen ).to.be.an( 'array' );
       expect( upToTen ).to.have.length( 10 );
@@ -159,7 +157,6 @@ describe( 'concat()', function() {
   });
 
   it( '`updatedOrders` is the result of joining the array `orderQueue` and two custom orders that you define', function() {
-    console.log( updatedOrders );
     expect( updatedOrders ).to.be.defined;
     expect( updatedOrders ).to.be.an( 'array' );
     expect( updatedOrders ).to.have.length( 4 );
@@ -220,13 +217,13 @@ describe( 'indexOf()', function() {
 });
 
 describe( 'lastIndexOf()', function() {
-  it( '`lastNine` stores the index of the last number 5 that can be found in the `bulkNumbers` array', function() {
+  it( '`lastNine` stores the index of the last 9 that can be found in the `bulkNumbers` array', function() {
     expect( lastNine ).to.be.defined;
     expect( lastNine ).to.be.a( 'number' );
     expect( lastNine ).to.be.equal( 5 );
   });
 
-  it( '`lastFive` stores the index of the last number 9 that can be found in the `bulkNumbers` array', function() {
+  it( '`lastFive` stores the index of the last number 5 that can be found in the `bulkNumbers` array', function() {
     expect( lastFive ).to.be.defined;
     expect( lastFive ).to.be.a( 'number' );
     expect( lastFive ).to.be.equal( 9 );

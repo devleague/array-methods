@@ -43,4 +43,31 @@ var notFruit = fruitCollection.splice(1, 3);
 gemBox.splice(5, 2);
 gemBox.splice(6, 4);
 
+//mindful of which index to start
 upToTen.splice(2, 0, 3, 4, 5, 6, 7, 8);
+
+brownOnly.splice(1, 5, 'brown', 'brown', 'brown');
+
+var orderedValuesNewLength = orderedValues.unshift(1, 2, 3);
+
+var randomThingsArray = genericNumberArray.concat(colors);
+
+var updatedOrders = orderQueue.concat({takeOut: 'Milkshake'}, {takeOut:'Fries'});
+
+var sentence = scrambledWords.sort().join(" ");
+
+var myFruits = fruitCollection.join(' + ');
+
+var favoriteFriends = friends.slice(1, 3);
+
+var owesMoney = friends.slice(3, 6);
+
+var monthNameString = monthNames.toString();
+
+var favoriteColor = colors.indexOf('Red');
+
+var favoriteEvenNumber = mixedNums.indexOf(76);
+
+var lastNine = bulkNumbers.lastIndexOf(9);
+
+var lastFive = bulkNumbers.lastIndexOf(5);

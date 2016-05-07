@@ -16,3 +16,30 @@ var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
 var bulkNumbers = [5, 5, 6, 6, 9, 9, 2, 2, 2, 5, 2];
 
 // do your work below!
+
+//push
+var nameArray = [];
+nameArray.push('Sheena', 'Galutira');
+
+var numberArray = [1, 2, 3, 4, 5];
+numberArray.push(6, 7, 8, 9, 10);
+console.log(numberArray);
+console.log(numberArray.length);
+
+//pop
+var myArray = ['Blue', 'Red', 'Yellow', 'Charlie'];
+var colorArray = myArray.pop();
+console.log(myArray);
+
+var popResult = colorArray;
+
+//reverse
+var scrambledWords = ['win', 'the', 'for', 'burritos'];
+scrambledWords.reverse();
+
+var phoneNumber = [9, 0, 3, 5, 7, 6, 8];
+phoneNumber.reverse();
+
+
+
+

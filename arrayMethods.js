@@ -21,15 +21,12 @@ var bulkNumbers = [5, 5, 6, 6, 9, 9, 2, 2, 2, 5, 2];
 var nameArray = [];
 nameArray.push('Sheena', 'Galutira');
 
-var numberArray = [1, 2, 3, 4, 5];
-numberArray.push(6, 7, 8, 9, 10);
-console.log(numberArray);
-console.log(numberArray.length);
+var genericNumberArray = [1, 2, 3, 4, 5];
+genericNumberArray.push(6, 7, 8, 9, 10);
+
 
 //pop
-var myArray = ['Blue', 'Red', 'Yellow', 'Charlie'];
-var colorArray = myArray.pop();
-console.log(myArray);
+var colorArray = colors.pop();
 
 var popResult = colorArray;
 
@@ -39,6 +36,27 @@ scrambledWords.reverse();
 
 var phoneNumber = [9, 0, 3, 5, 7, 6, 8];
 phoneNumber.reverse();
+
+//shift
+var nextOrder = orderQueue.shift();
+
+
+
+//sort
+mixedNums.sort();
+
+mixedWords.sort();
+
+//splice
+var notFruit = fruitCollection.splice(1, 3);
+
+gemBox.splice(3, 2);
+gemBox.splice(6, 4);
+
+
+
+
+
 
 
 

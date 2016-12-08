@@ -9,7 +9,7 @@ Array Basics
 1. Make all the test pass!
 
 ### Running in Browser
-Run the command: `npm start` then visit `localhost:8080/` in your browser
+Run the command: `npm start`
 
 ### Running in Cli
 Run the command: `npm test` to run the tests in your command-line

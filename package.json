@@ -15,7 +15,7 @@
   "devDependencies": {
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha -R spec --bail --watch",
+    "test": "mocha -R spec --bail --watch",
     "start": "./node_modules/.bin/http-server"
   },
   "repository": {

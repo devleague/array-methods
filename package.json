@@ -4,19 +4,17 @@
   "description": "An exercise focusing on methods that access and mutate Arrays",
   "main": "arrayMethods.js",
   "directories": {
-    "test": "test",
-    "http": "."
+    "test": "test"
   },
   "dependencies": {
     "chai": "^2.3.0",
-    "http-server": "^0.8.0",
+    "live-server": "^1.2.0",
     "mocha": "^2.2.5"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
-    "test": "./node_modules/.bin/mocha -R spec --bail --watch",
-    "start": "./node_modules/.bin/http-server"
+    "test": "mocha -R spec --bail --watch",
+    "start": "live-server"
   },
   "repository": {
     "type": "git",

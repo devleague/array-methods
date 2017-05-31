@@ -14,5 +14,45 @@ var orderedValues = [4, 5, 6, 7, 8, 9, 10];
 var friends = ['Todd', 'Jacoby', 'Miko', 'Joseph', 'Kevin', 'Todd C.'];
 var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
 var bulkNumbers = [5, 5, 6, 6, 9, 9, 2, 2, 2, 5, 2];
-
 // do your work below!
+var nameArray = [];
+nameArray.push("John");
+nameArray.push("Atkins");
+for (i=6; i<11; i++) { genericNumberArray.push(i); }
+var popResult = colors.pop();
+var swlen = scrambledWords.length-1;
+for (i=0; i<=1; i++){
+	var first = scrambledWords[i];
+	var last = scrambledWords[swlen-i];
+	scrambledWords[i] = last;
+	scrambledWords[swlen-i] = first;
+}
+var pnlen = phoneNumber.length-1;
+for (i=0; i<=2; i++){
+	var first = phoneNumber[i];
+	var last = phoneNumber[pnlen-i];
+	phoneNumber[i] = last;
+	phoneNumber[pnlen-i] = first;
+}
+var nextOrder = orderQueue.shift();
+mixedNums.sort();
+mixedWords.sort();
+var notFruit = fruitCollection.splice(1, 3);
+gemBox.splice(5, 2);
+gemBox.splice(6, 4);
+upToTen.splice(2, 0, 3,4,5,6,7,8);
+brownOnly.splice(1, 5, "brown", "brown", "brown");
+orderedValues.unshift(1, 2, 3);
+orderedValuesNewLength = orderedValues.length;
+var randomThingsArray = genericNumberArray.concat(colors);
+var customOrders = [{takeOut: "bison burger"}, {takeOut: "ostrich burger"}];
+var updatedOrders = orderQueue.concat(customOrders);
+var sentence = scrambledWords.join(" ");
+var myFruits = fruitCollection.join(" + ");
+var favoriteFriends = friends.slice(1, 3);
+var owesMoney = friends.slice(3);
+var monthNameString = monthNames.toString();
+var favoriteColor = colors.indexOf('Red');
+var favoriteEvenNumber = mixedNums.indexOf(76);
+var lastNine = bulkNumbers.lastIndexOf(9);
+var lastFive = bulkNumbers.lastIndexOf(5);

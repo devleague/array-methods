@@ -16,3 +16,76 @@ var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
 var bulkNumbers = [5, 5, 6, 6, 9, 9, 2, 2, 2, 5, 2];
 
 // do your work below!
+
+var nameArray = [];
+nameArray.push("Mika");
+nameArray.push("Dumont");
+
+for (var i = 6; i <= 10; i++)
+	genericNumberArray.push(i);
+
+var popResult = colors.pop();
+
+scrambledWords.reverse();
+
+phoneNumber.reverse();
+
+var nextOrder = orderQueue.shift();
+
+mixedNums.sort();
+console.log(mixedNums);
+console.log(typeof mixedNums[0]);
+
+mixedWords.sort();
+
+var notFruit = fruitCollection.splice(1,3);
+
+gemBox.splice(5, 2);
+gemBox.splice(6,4);
+
+upToTen.splice(2,0,3,4,5,6,7,8);
+
+brownOnly.splice(1,5, 'brown', 'brown', 'brown');
+
+var orderedValuesNewLength = -1;
+for(i = 3; i >=1; i --)
+orderedValuesNewLength = orderedValues.unshift(i);
+
+var randomThingsArray = genericNumberArray.concat(colors);
+
+var orderQueue2 = [{takeOut: 'pasta'}, {takeOut: 'soondubu'}];
+var updatedOrders = orderQueue.concat(orderQueue2);
+
+var sentence = scrambledWords.join(' ');
+
+var myFruits = fruitCollection.join(' + ');
+
+var favoriteFriends = friends.slice(1,3);
+
+var owesMoney = friends.slice(3);
+
+var monthNameString = monthNames.toString();
+
+var favoriteColor = colors.indexOf('Red');
+
+var favoriteEvenNumber = mixedNums.indexOf(76);
+
+var lastNine = bulkNumbers.lastIndexOf(9);
+
+var lastFive = bulkNumbers.lastIndexOf(5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

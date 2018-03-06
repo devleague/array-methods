@@ -24,3 +24,5 @@ nameArray.push('Wu');
 for (let index = 6; index < 11; index++) {
     genericNumberArray.push(index);    
 }
+
+var popResult = colors.pop();

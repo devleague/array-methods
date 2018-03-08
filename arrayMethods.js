@@ -32,3 +32,43 @@ popResult = colors.pop();
 scrambledWords.reverse();
 phoneNumber.reverse();
 
+var nextOrder = orderQueue.shift();
+
+mixedNums.sort();
+mixedWords.sort();
+
+var notFruit = fruitCollection.splice(1, 3);
+
+gemBox.splice(5, 2);
+gemBox.splice(6, 4);
+
+upToTen.splice(2, 0, 3, 4, 5, 6, 7, 8)
+
+brownOnly.splice(1, brownOnly.length -2);
+brownOnly.splice(2, 0, "brown", "brown", "brown");
+
+orderedValues.unshift(1, 2, 3);
+orderedValuesNewLength = orderedValues.length;
+
+var randomThingsArray = genericNumberArray.concat(colors);
+
+var newOrder = [{takeOut: "Large Coke"}, {takeOut: "Freedom Fries"}];
+var updatedOrders = orderQueue.concat(newOrder);
+
+var sentence = scrambledWords.join(" ");
+
+var myFruits = fruitCollection.join(" + ")
+
+var favoriteFriends = friends.slice(1, 3);
+
+var owesMoney = friends.slice(3, 6);
+
+var monthNameString = monthNames.toString();
+
+var favoriteColor = colors.indexOf("Red");
+
+var favoriteEvenNumber = mixedNums.indexOf(76);
+
+var lastNine = bulkNumbers.lastIndexOf(9);
+
+var lastFive = bulkNumbers.lastIndexOf(5);
